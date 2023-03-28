@@ -12,8 +12,6 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }} 
       HERE: ${{ secrets.HERE }}
-    with:
-      HERE: ${{secrets.HERE}}
 
     steps:
       # imports an action from another repository, 
