@@ -2,6 +2,7 @@ library(hereR)
 library(sf)
 
 bucharest <- read_sf(here::here("bucharest.geojson"))
+print(Sys.getenv("HERE"))
 hereR::set_key(Sys.getenv("HERE"))
 
 x <- hereR::flow(aoi=bucharest)
