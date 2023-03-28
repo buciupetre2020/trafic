@@ -1,5 +1,6 @@
 library(hereR)
 library(sf)
+print(Sys.getenv("HERE"))
 
 bucharest <- read_sf(here::here("bucharest.geojson"))
 hereR::set_key(Sys.getenv("HERE"))
