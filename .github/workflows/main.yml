@@ -33,6 +33,7 @@ jobs:
             any::sf
             any::hereR
             any::here
+            any::tibble
 
       - name: Execute Script
         run: |
