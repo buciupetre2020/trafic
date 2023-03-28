@@ -32,6 +32,7 @@ jobs:
           packages: |
             any::sf
             any::hereR
+            any::here
 
       - name: Execute Script
         run: |
