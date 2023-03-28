@@ -1,11 +1,9 @@
-name: trafic
-
 on: 
   schedule: 
     - cron: "*/15 * * * *"
   workflow_dispatch:
   
-name: main.R
+name: trafic
 
 jobs:
   run-r-script:
