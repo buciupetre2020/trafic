@@ -37,7 +37,9 @@ jobs:
 
       - name: Execute Script
         run: |
-          Rscript "main.R"                        
+          Rscript "main.R"           
+        with:
+          HERE: ${{ secrets.HERE }}
 
 
 
