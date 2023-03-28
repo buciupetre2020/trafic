@@ -36,12 +36,11 @@ jobs:
             any::hereR
             any::here
             any::tibble
+          HERE: ${{ secrets.HERE }}
 
       - name: Execute Script
         run: |
           Rscript "main.R"           
-        with:
-          HERE: ${{ secrets.HERE }}
 
 
 
