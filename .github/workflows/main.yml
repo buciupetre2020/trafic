@@ -1,6 +1,6 @@
 on: 
   schedule: 
- #   - cron: "*/60 * * * *"
+    - cron: "*/60 * * * *"
     
   workflow_dispatch:
   
@@ -36,7 +36,12 @@ jobs:
             any::hereR
             any::here
             any::tibble
+          HERE: $${{ var.HERE }}
 
+      - name: See envs
+        run: |
+          env
+          
       - name: Execute Script
         run: |
           Rscript "main.R"           
