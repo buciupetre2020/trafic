@@ -7,4 +7,4 @@ hereR::set_key(Sys.getenv("HERE"))
 
 x <- hereR::flow(aoi=bucharest)
 
-sf::write_sf(x, paste0("data/", Sys.time(), ".geojson"))
+geojson::geo_write(x, paste0("data/", Sys.time(), ".geojson"))
