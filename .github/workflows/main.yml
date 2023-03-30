@@ -37,8 +37,9 @@ jobs:
             any::here
             any::tibble
 
-      - name: See envs
+      - name: See variables
         run: |
+          echo ${{vars.HERE}}
           echo $HERE
           
       - name: Execute Script
