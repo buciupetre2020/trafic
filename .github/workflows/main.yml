@@ -39,7 +39,7 @@ jobs:
 
       - name: See envs
         run: |
-          env
+          echo $HERE
           
       - name: Execute Script
         run: |
