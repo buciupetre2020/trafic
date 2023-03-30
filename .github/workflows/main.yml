@@ -37,7 +37,7 @@ jobs:
             any::hereR
             any::here
             any::tibble
-            any::geojsonio
+            any::geojson
           
       - name: Execute Script
         run: |
