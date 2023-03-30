@@ -12,6 +12,7 @@ jobs:
     
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }} 
+      HERE: ${{vars.HERE}}
       
 
     steps:
@@ -25,7 +26,6 @@ jobs:
         with:
           # uses the RStudio Package Manager
           use-public-rspm: true
-          HERE: ${{vars.HERE}}
         
       # imports an action from another repository, 
       # that deals with the dependencies
