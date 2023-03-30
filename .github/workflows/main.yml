@@ -38,6 +38,7 @@ jobs:
             any::here
             any::tibble
             any::geojson
+            any::geojsonsf
           
       - name: Execute Script
         run: |
