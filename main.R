@@ -9,4 +9,4 @@ x <- hereR::flow(aoi=bucharest)
 
 print(paste0("data/", Sys.time(), ".csv"))
 
-write.csv(x, paste0("data/", Sys.time(), ".csv"))
+sf::write_sf(x, paste0("data/", Sys.time(), ".geojson"))
