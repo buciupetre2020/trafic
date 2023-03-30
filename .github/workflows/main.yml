@@ -12,6 +12,7 @@ jobs:
     
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }} 
+      
 
     steps:
       # imports an action from another repository, 
@@ -24,7 +25,7 @@ jobs:
         with:
           # uses the RStudio Package Manager
           use-public-rspm: true
-
+          HERE: ${{vars.HERE}}
         
       # imports an action from another repository, 
       # that deals with the dependencies
@@ -36,11 +37,6 @@ jobs:
             any::hereR
             any::here
             any::tibble
-
-      - name: See variables
-        run: |
-          echo ${{vars.HERE}}
-          echo $HERE
           
       - name: Execute Script
         run: |
