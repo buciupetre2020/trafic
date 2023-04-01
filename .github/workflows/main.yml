@@ -33,12 +33,7 @@ jobs:
         with: 
           # here we have to add all the packages we used in the script!
           packages: |
-            any::sf
-            any::hereR
-            any::here
-            any::tibble
-            any::geojson
-            any::geojsonsf
+            any::xml2
           
       - name: Execute Script
         run: |
