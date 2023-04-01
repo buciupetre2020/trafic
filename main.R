@@ -1,12 +1,4 @@
-library(hereR)
-library(sf)
-library(geojsonsf)
-library(geojson)
-bucharest <- read_sf(here::here("bucharest.geojson"))
+library(xml2)
 
-hereR::set_key(Sys.getenv("HERE"))
-
-x <- hereR::flow(aoi=bucharest)
-
-x <- geojsonsf::sf_geojson(x)
-geo_write(x, paste0("data/", Sys.time(), ".geojson"))
+url <- paste0("https://traffic.ls.hereapi.com/traffic/6.2/flow.xml?apiKey=", Sys.getenv("HERE"), "&bbox=44.5414092689562,25.9666736896155;44.3342474501834,26.2255725292719&responseattributes=sh,fc")
+xml2::download_xml(url, file=paste0("data/", Sys.time(), ".xml"))
